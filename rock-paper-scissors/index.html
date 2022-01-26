@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="content-header flex">
+        <h1 class="header-title">Rock Paper and Scissors</h1>
+        <p class="header-description">Choose your weapon and try your luck against the computer!</p>
+      </header>
+      <main class="main-content">
+        <p class="announcer"></p>
+        <div class="battleground flex">
+          <div class="versus-text">V<span>S</span></div>
+          <div class="player flex">
+            <img src="person.png" alt="Gigachad Person" class="player-image" />
+            <h2 class="player-title">You</h2>
+            <div class="arrows">
+              <i class="fas fa-angle-up uparrow" onClick="addWeapon(1)"></i>
+              <i class="fas fa-angle-down downarrow" onCLick="addWeapon(-1)"></i>
+            </div>
+            <div class="gestures rock">
+              <i class="fas fa-fist-raised player weapon"></i
+              ><i class="fas fa-hand-paper player weapon"></i
+              ><i class="fas fa-hand-scissors player weapon"></i>
+            </div>
+            <div class="life">5</div>
+          </div>
+          <div class="computer flex">
+            <img src="computer.png" alt="Gigachad Computer" class="computer-image" />
+            <h2 class="player-title">Computer</h2>
+            <div class="gestures"><i class="fas fa-fist-raised computer-hand"></i></div>
+            <div class="life">5</div>
+          </div>
+        </div>
+
+        <button class="button button--main">Start</button>
+      </main>
+      <div class="end-screen">
+        <h2 class="end-title">You won!</h2>
+        <p class="end-description">You have won against the computer! You're a true gigachad!</p>
+        <button class="button button--restart">Play again!</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
